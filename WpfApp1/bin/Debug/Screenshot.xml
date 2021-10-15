@@ -1,0 +1,526 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Screenshot</name>
+    </assembly>
+    <members>
+        <member name="T:Screenshot.BitmapExtensions">
+            <summary>
+            Defines the <see cref="T:Screenshot.BitmapExtensions" />.
+            </summary>
+        </member>
+        <member name="M:Screenshot.BitmapExtensions.ToBitmapSource(System.Drawing.Bitmap)">
+            <summary>
+            The ToBitmapSource.
+            </summary>
+            <param name="bitmap">The bitmap<see cref="T:System.Drawing.Bitmap"/>.</param>
+            <returns>The <see cref="T:System.Windows.Media.Imaging.BitmapSource"/>.</returns>
+        </member>
+        <member name="T:Screenshot.HotKey">
+            <summary>
+            Defines the <see cref="T:Screenshot.HotKey" />.
+            </summary>
+        </member>
+        <member name="F:Screenshot.HotKey.WM_HOTKEY">
+            <summary>
+            热键消息..
+            </summary>
+        </member>
+        <member name="F:Screenshot.HotKey.source">
+            <summary>
+            Defines the source.
+            </summary>
+        </member>
+        <member name="F:Screenshot.HotKey.action">
+            <summary>
+            Defines the action.
+            </summary>
+        </member>
+        <member name="M:Screenshot.HotKey.#ctor(System.Windows.Window,System.Windows.Input.ModifierKeys,System.Windows.Forms.Keys,System.Action)">
+            <summary>
+            Prevents a default instance of the <see cref="T:Screenshot.HotKey"/> class from being created.
+            </summary>
+            <param name="window">The window<see cref="T:System.Windows.Window"/>.</param>
+            <param name="modifiers">The modifiers<see cref="T:System.Windows.Input.ModifierKeys"/>.</param>
+            <param name="key">The key<see cref="T:System.Windows.Forms.Keys"/>.</param>
+            <param name="action">The action<see cref="T:System.Action"/>.</param>
+        </member>
+        <member name="P:Screenshot.HotKey.Id">
+            <summary>
+            Gets the Id.
+            </summary>
+        </member>
+        <member name="P:Screenshot.HotKey.Key">
+            <summary>
+            Gets the Key.
+            </summary>
+        </member>
+        <member name="P:Screenshot.HotKey.Modifiers">
+            <summary>
+            Gets the Modifiers.
+            </summary>
+        </member>
+        <member name="M:Screenshot.HotKey.Register(System.Windows.Window,System.Windows.Input.ModifierKeys,System.Windows.Forms.Keys,System.Action)">
+            <summary>
+            The Register.
+            </summary>
+            <param name="window">The window<see cref="T:System.Windows.Window"/>.</param>
+            <param name="modifiers">The modifiers<see cref="T:System.Windows.Input.ModifierKeys"/>.</param>
+            <param name="key">The key<see cref="T:System.Windows.Forms.Keys"/>.</param>
+            <param name="action">The action<see cref="T:System.Action"/>.</param>
+            <returns>The <see cref="T:Screenshot.HotKey"/>.</returns>
+        </member>
+        <member name="M:Screenshot.HotKey.Unregister">
+            <summary>
+            The Unregister.
+            </summary>
+        </member>
+        <member name="M:Screenshot.HotKey.GetString(System.Windows.Input.ModifierKeys,System.Windows.Forms.Keys)">
+            <summary>
+            The GetString.
+            </summary>
+            <param name="modifiers">The modifiers<see cref="T:System.Windows.Input.ModifierKeys"/>.</param>
+            <param name="key">The key<see cref="T:System.Windows.Forms.Keys"/>.</param>
+            <returns>The <see cref="T:System.String"/>.</returns>
+        </member>
+        <member name="M:Screenshot.HotKey.GlobalAddAtom(System.String)">
+            <summary>
+            向原子表中添加全局原子.
+            </summary>
+            <param name="lpString">The lpString<see cref="T:System.String"/>.</param>
+            <returns>The <see cref="T:System.UInt16"/>.</returns>
+        </member>
+        <member name="M:Screenshot.HotKey.GlobalDeleteAtom(System.String)">
+            <summary>
+            在表中删除全局原子.
+            </summary>
+            <param name="nAtom">The nAtom<see cref="T:System.String"/>.</param>
+            <returns>The <see cref="T:System.UInt16"/>.</returns>
+        </member>
+        <member name="M:Screenshot.HotKey.GlobalFindAtom(System.String)">
+            <summary>
+            在表中搜索全局原子.
+            </summary>
+            <param name="lpString">The lpString<see cref="T:System.String"/>.</param>
+            <returns>The <see cref="T:System.UInt16"/>.</returns>
+        </member>
+        <member name="M:Screenshot.HotKey.RegisterHotKey(System.IntPtr,System.Int32,System.Windows.Input.ModifierKeys,System.Windows.Forms.Keys)">
+            <summary>
+            注册热键.
+            </summary>
+            <param name="hWnd">The hWnd<see cref="T:System.IntPtr"/>.</param>
+            <param name="id">The id<see cref="T:System.Int32"/>.</param>
+            <param name="fsModifuers">The fsModifuers<see cref="T:System.Windows.Input.ModifierKeys"/>.</param>
+            <param name="vk">The vk<see cref="T:System.Windows.Forms.Keys"/>.</param>
+            <returns>The <see cref="T:System.Boolean"/>.</returns>
+        </member>
+        <member name="M:Screenshot.HotKey.UnregisterHotKey(System.IntPtr,System.Int32)">
+            <summary>
+            注销热键.
+            </summary>
+            <param name="hWnd">The hWnd<see cref="T:System.IntPtr"/>.</param>
+            <param name="id">The id<see cref="T:System.Int32"/>.</param>
+            <returns>The <see cref="T:System.Boolean"/>.</returns>
+        </member>
+        <member name="M:Screenshot.HotKey.WndProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr,System.Boolean@)">
+            <summary>
+            The WndProc.
+            </summary>
+            <param name="hwnd">The hwnd<see cref="T:System.IntPtr"/>.</param>
+            <param name="msg">The msg<see cref="T:System.Int32"/>.</param>
+            <param name="wParam">The wParam<see cref="T:System.IntPtr"/>.</param>
+            <param name="lParam">The lParam<see cref="T:System.IntPtr"/>.</param>
+            <param name="handle">The handle<see cref="T:System.Boolean"/>.</param>
+            <returns>The <see cref="T:System.IntPtr"/>.</returns>
+        </member>
+        <member name="T:Screenshot.HotKeyRegisterFailException">
+            <summary>
+            Defines the <see cref="T:Screenshot.HotKeyRegisterFailException" />.
+            </summary>
+        </member>
+        <member name="M:Screenshot.HotKeyRegisterFailException.#ctor(System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Screenshot.HotKeyRegisterFailException"/> class.
+            </summary>
+            <param name="e">The e<see cref="T:System.Exception"/>.</param>
+        </member>
+        <member name="M:Screenshot.HotKeyRegisterFailException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Screenshot.HotKeyRegisterFailException"/> class.
+            </summary>
+            <param name="message">The message<see cref="T:System.String"/>.</param>
+            <param name="e">The e<see cref="T:System.Exception"/>.</param>
+        </member>
+        <member name="T:Screenshot.RegionSelectionWindow">
+            <summary>
+            Defines the <see cref="T:Screenshot.RegionSelectionWindow" />.
+            </summary>
+            <summary>
+            RegionSelectionWindow
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.IsCancelShot">
+            <summary>
+            Defines the IsCancelShot.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow._selectionStartPosForFirst">
+            <summary>
+            Defines the _selectionStartPosForFirst.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.isFirstComeIn">
+            <summary>
+            Defines the isFirstComeIn.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.isMouseLeftButtonDown">
+            <summary>
+            Defines the isMouseLeftButtonDown.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.selectBoderRightDownPosition">
+            <summary>
+            Defines the selectBoderRightDownPosition.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.selectBoderLeftTopPosition">
+            <summary>
+            Defines the selectBoderLeftTopPosition.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.toolBarLeftTopPosition">
+            <summary>
+            Defines the toolBarLeftTopPosition.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.mouseDownPosition">
+            <summary>
+            Defines the mouseDownPosition.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.funType">
+            <summary>
+            Defines the funType.
+            </summary>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Screenshot.RegionSelectionWindow"/> class.
+            </summary>
+        </member>
+        <member name="T:Screenshot.RegionSelectionWindow.FunType">
+            <summary>
+            Defines the FunType.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.FunType.Select">
+            <summary>
+            Defines the Select.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.FunType.MoveAll">
+            <summary>
+            Defines the MoveAll.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.FunType.MoveLeftTop">
+            <summary>
+            Defines the MoveLeftTop.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.FunType.MoveLeftMid">
+            <summary>
+            Defines the MoveLeftMid.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.FunType.MoveLeftDown">
+            <summary>
+            Defines the MoveLeftDown.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.FunType.MoveTopMid">
+            <summary>
+            Defines the MoveTopMid.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.FunType.MoveRightTop">
+            <summary>
+            Defines the MoveRightTop.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.FunType.MoveRightMid">
+            <summary>
+            Defines the MoveRightMid.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.FunType.moveRightDown">
+            <summary>
+            Defines the moveRightDown.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.FunType.MoveDownMid">
+            <summary>
+            Defines the MoveDownMid.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.FunType.Cancle">
+            <summary>
+            Defines the Cancle.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.FunType.Ok">
+            <summary>
+            Defines the Ok.
+            </summary>
+        </member>
+        <member name="F:Screenshot.RegionSelectionWindow.FunType.nul">
+            <summary>
+            Defines the nul.
+            </summary>
+        </member>
+        <member name="P:Screenshot.RegionSelectionWindow.SelectedRegion">
+            <summary>
+            Gets the SelectedRegion.
+            </summary>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.GetAbsolutePlacement(System.Windows.FrameworkElement,System.Boolean)">
+            <summary>
+            The GetAbsolutePlacement.
+            </summary>
+            <param name="element">The element<see cref="T:System.Windows.FrameworkElement"/>.</param>
+            <param name="relativeToScreen">The relativeToScreen<see cref="T:System.Boolean"/>.</param>
+            <returns>The <see cref="T:System.Windows.Rect"/>.</returns>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            The OnKeyDown.
+            </summary>
+            <param name="e">The e<see cref="T:System.Windows.Input.KeyEventArgs"/>.</param>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            The OnMouseLeftButtonDown.
+            </summary>
+            <param name="e">The e<see cref="T:System.Windows.Input.MouseButtonEventArgs"/>.</param>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            The OnMouseLeftButtonUp.
+            </summary>
+            <param name="e">The e<see cref="T:System.Windows.Input.MouseButtonEventArgs"/>.</param>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.OnMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            The OnMouseMove.
+            </summary>
+            <param name="e">The e<see cref="T:System.Windows.Input.MouseEventArgs"/>.</param>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.Ell_DownMid_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            The Ell_DownMid_MouseLeftButtonDown.
+            </summary>
+            <param name="sender">The sender<see cref="T:System.Object"/>.</param>
+            <param name="e">The e<see cref="T:System.Windows.Input.MouseButtonEventArgs"/>.</param>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.Ell_LeftDown_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            The Ell_LeftDown_MouseLeftButtonDown.
+            </summary>
+            <param name="sender">The sender<see cref="T:System.Object"/>.</param>
+            <param name="e">The e<see cref="T:System.Windows.Input.MouseButtonEventArgs"/>.</param>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.Ell_LeftMid_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            The Ell_LeftMid_MouseLeftButtonDown.
+            </summary>
+            <param name="sender">The sender<see cref="T:System.Object"/>.</param>
+            <param name="e">The e<see cref="T:System.Windows.Input.MouseButtonEventArgs"/>.</param>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.Ell_LeftTop_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            The Ell_LeftTop_MouseLeftButtonDown.
+            </summary>
+            <param name="sender">The sender<see cref="T:System.Object"/>.</param>
+            <param name="e">The e<see cref="T:System.Windows.Input.MouseButtonEventArgs"/>.</param>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.Ell_MouseLeftButtonMove(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            The Ell_MouseLeftButtonMove.
+            </summary>
+            <param name="sender">The sender<see cref="T:System.Object"/>.</param>
+            <param name="e">The e<see cref="T:System.Windows.Input.MouseEventArgs"/>.</param>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.Ell_RightDown_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            The Ell_RightDown_MouseLeftButtonDown.
+            </summary>
+            <param name="sender">The sender<see cref="T:System.Object"/>.</param>
+            <param name="e">The e<see cref="T:System.Windows.Input.MouseButtonEventArgs"/>.</param>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.Ell_RightMid_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            The Ell_RightMid_MouseLeftButtonDown.
+            </summary>
+            <param name="sender">The sender<see cref="T:System.Object"/>.</param>
+            <param name="e">The e<see cref="T:System.Windows.Input.MouseButtonEventArgs"/>.</param>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.Ell_RightTop_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            The Ell_RightTop_MouseLeftButtonDown.
+            </summary>
+            <param name="sender">The sender<see cref="T:System.Object"/>.</param>
+            <param name="e">The e<see cref="T:System.Windows.Input.MouseButtonEventArgs"/>.</param>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.Ell_TopMid_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            The Ell_TopMid_MouseLeftButtonDown.
+            </summary>
+            <param name="sender">The sender<see cref="T:System.Object"/>.</param>
+            <param name="e">The e<see cref="T:System.Windows.Input.MouseButtonEventArgs"/>.</param>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.Image_Cancle_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            The Image_Cancle_MouseLeftButtonDown.
+            </summary>
+            <param name="sender">The sender<see cref="T:System.Object"/>.</param>
+            <param name="e">The e<see cref="T:System.Windows.Input.MouseButtonEventArgs"/>.</param>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.Image_OK_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            The Image_OK_MouseLeftButtonDown.
+            </summary>
+            <param name="sender">The sender<see cref="T:System.Object"/>.</param>
+            <param name="e">The e<see cref="T:System.Windows.Input.MouseButtonEventArgs"/>.</param>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.OperateLeftDownMove(System.Windows.Input.MouseEventArgs,System.Double)">
+            <summary>
+            The OperateLeftDownMove.
+            </summary>
+            <param name="e">The e<see cref="T:System.Windows.Input.MouseEventArgs"/>.</param>
+            <param name="ellSize">The ellSize<see cref="T:System.Double"/>.</param>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.OperateRightTopMove(System.Windows.Input.MouseEventArgs,System.Double)">
+            <summary>
+            The OperateRightTopMove.
+            </summary>
+            <param name="e">The e<see cref="T:System.Windows.Input.MouseEventArgs"/>.</param>
+            <param name="ellSize">The ellSize<see cref="T:System.Double"/>.</param>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.SelectionBorder_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            The SelectionBorder_MouseLeftButtonDown.
+            </summary>
+            <param name="sender">The sender<see cref="T:System.Object"/>.</param>
+            <param name="e">The e<see cref="T:System.Windows.Input.MouseButtonEventArgs"/>.</param>
+        </member>
+        <member name="M:Screenshot.RegionSelectionWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Screenshot.Resources.UC_SelectTool">
+            <summary>
+            SelectTool.xaml 的交互逻辑.
+            </summary>
+            <summary>
+            UC_SelectTool
+            </summary>
+        </member>
+        <member name="M:Screenshot.Resources.UC_SelectTool.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Screenshot.Resources.UC_SelectTool"/> class.
+            </summary>
+        </member>
+        <member name="M:Screenshot.Resources.UC_SelectTool.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Screenshot.Resources.UC_SelectionBoder">
+            <summary>
+            UC_SelectionBoder.xaml 的交互逻辑.
+            </summary>
+            <summary>
+            UC_SelectionBoder
+            </summary>
+        </member>
+        <member name="M:Screenshot.Resources.UC_SelectionBoder.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Screenshot.Resources.UC_SelectionBoder"/> class.
+            </summary>
+        </member>
+        <member name="M:Screenshot.Resources.UC_SelectionBoder.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Screenshot.Screenshot1">
+            <summary>
+            Defines the <see cref="T:Screenshot.Screenshot1" />.
+            </summary>
+        </member>
+        <member name="F:Screenshot.Screenshot1.ReturnScreenShotEvent">
+            <summary>
+            截图后的图像通过此委托返回...
+            </summary>
+        </member>
+        <member name="M:Screenshot.Screenshot1.CaptureAllScreens">
+            <summary>
+            获取屏幕当前截图.
+            </summary>
+            <returns>.</returns>
+        </member>
+        <member name="M:Screenshot.Screenshot1.CaptureRegion(System.Windows.Rect)">
+            <summary>
+            根据传入的矩形截取屏幕上的一部分.
+            </summary>
+            <param name="rect">.</param>
+            <returns>.</returns>
+        </member>
+        <member name="M:Screenshot.Screenshot1.CaptureRegion(Screenshot.ScreenshotOptions)">
+            <summary>
+            开始截图.
+            </summary>
+            <param name="options">对透明度以及框的颜色进行设置.</param>
+        </member>
+        <member name="M:Screenshot.Screenshot1.RegisterHotKey(System.Windows.Window,System.Windows.Input.ModifierKeys,System.Windows.Forms.Keys)">
+            <summary>
+            注册热键.
+            </summary>
+            <param name="window">接收消息的窗口.</param>
+            <param name="modifiers">功能键.</param>
+            <param name="key">附加按键.</param>
+        </member>
+        <member name="M:Screenshot.Screenshot1.GetBitmapRegion(System.Windows.Media.Imaging.BitmapSource,System.Windows.Rect)">
+            <summary>
+            从图片中截取一部分.
+            </summary>
+            <param name="bitmap">The bitmap<see cref="T:System.Windows.Media.Imaging.BitmapSource"/>.</param>
+            <param name="rect">The rect<see cref="T:System.Windows.Rect"/>.</param>
+            <returns>The <see cref="T:System.Windows.Media.Imaging.BitmapSource"/>.</returns>
+        </member>
+        <member name="T:Screenshot.ScreenshotOptions">
+            <summary>
+            截图界面设置.
+            </summary>
+        </member>
+        <member name="M:Screenshot.ScreenshotOptions.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Screenshot.ScreenshotOptions"/> class.
+            </summary>
+        </member>
+        <member name="P:Screenshot.ScreenshotOptions.BackgroundOpacity">
+            <summary>
+            Gets or sets the BackgroundOpacity
+            Background opacity when selecting region to capture..
+            </summary>
+        </member>
+        <member name="P:Screenshot.ScreenshotOptions.SelectionRectangleBorderBrush">
+            <summary>
+            Gets or sets the SelectionRectangleBorderBrush
+            Brush used to draw border of selection rectangle..
+            </summary>
+        </member>
+    </members>
+</doc>
